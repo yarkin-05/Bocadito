@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Fredoka:wght@600&family=Fraunces:wght@400&family=Inter:wght@400;500;600;700&family=Noto+Sans+Math&family=Noto+Sans+Symbols&family=Noto+Sans+Symbols+2&family=Noto+Sans:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
+    <title>Mi perfil y Alacena · bocadito.</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/profile.css" />
+  </head>
+  <body class="profile-page">
+    <header class="site-header profile-header">
+      <a class="brand" href="/index.html" aria-label="bocadito, inicio">
+        <img src="/public/assets/profile-fae16.svg" alt="" width="32" height="32" />
+        <span>bocadito.</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="/index.html">Recetario</a>
+        <a href="/index.html#recetas">Mis favoritas</a>
+        <a class="active" href="/perfil.html">Mi perfil</a>
+      </nav>
+      <div class="account">
+        <a class="pantry-button" href="#alacena">
+          <img src="/public/assets/profile-280c1.svg" alt="" width="20" height="20" />
+          <span>Alacena · <b class="pantry-total">8</b></span>
+        </a>
+        <a class="avatar" href="#profile-summary" aria-label="Ir a los datos del perfil">LC</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="profile-summary" id="profile-summary" aria-labelledby="profile-name">
+        <div class="personal-avatar" id="profile-initial">A</div>
+        <div class="profile-copy">
+          <p>MI PEQUEÑA COCINA</p>
+          <h1 id="profile-name">Aly :3</h1>
+          <span id="profile-bio"
+            >Cocinera de todos los días · Me gusta lo sencillo y de temporada</span
+          >
+        </div>
+        <button class="edit-profile-button" id="edit-profile" type="button">
+          <img src="/public/assets/profile-6e038.svg" alt="" width="20" height="20" />
+          Editar perfil
+        </button>
+      </section>
+
+      <nav class="profile-tabs" aria-label="Secciones del perfil">
+        <a class="active" href="#alacena">
+          <img src="/public/assets/profile-058fb.svg" alt="" width="20" height="20" />
+          Alacena <span class="pantry-total">8</span>
+        </a>
+        <a href="/index.html#recetas">Mis favoritas · 12</a>
+        <a href="#mis-recetas">Mis recetas</a>
+      </nav>
+
+      <section class="pantry-content" id="alacena" aria-labelledby="pantry-title">
+        <header class="pantry-heading">
+          <div>
+            <h2 id="pantry-title">Alacena</h2>
+            <p>Lo que tienes a mano, listo para convertirse en algo rico.</p>
+          </div>
+          <span class="saved-state">
+            <img src="/public/assets/profile-2d024.svg" alt="" width="16" height="16" />
+            Alacena actualizada · hoy
+          </span>
+        </header>
+
+        <form class="ingredient-form" id="ingredient-form">
+          <div class="form-intro">
+            <img src="/public/assets/profile-91d9a.svg" alt="" width="18" height="18" />
+            <strong>¿Qué hay en tu cocina?</strong>
+            <span>Añade un ingrediente y su cantidad disponible.</span>
+          </div>
+          <div class="form-fields">
+            <label class="ingredient-name">
+              <span>Ingrediente</span>
+              <span class="field-control">
+                <input
+                  id="ingredient-name"
+                  name="ingredient"
+                  placeholder="Buscar ingrediente…"
+                  required
+                />
+                <img src="/public/assets/profile-80ec2.svg" alt="" width="17" height="17" />
+              </span>
+            </label>
+            <label>
+              <span>Cantidad</span>
+              <span class="field-control">
+                <input id="ingredient-amount" name="amount" placeholder="Ej. 250" required />
+              </span>
+            </label>
+            <label>
+              <span>Unidad</span>
+              <span class="field-control">
+                <select id="ingredient-unit" name="unit">
+                  <option value="g">Gramos (g)</option>
+                  <option value="ml">Mililitros (ml)</option>
+                  <option value="unidades">Unidades</option>
+                  <option value="cabeza">Cabeza</option>
+                  <option value="l">Litros (l)</option>
+                </select>
+                <img src="/public/assets/profile-06a0c.svg" alt="" width="17" height="17" />
+              </span>
+            </label>
+            <label>
+              <span>Categoría</span>
+              <span class="field-control">
+                <select id="ingredient-category" name="category" required>
+                  <option value="">Selecciona</option>
+                  <option value="Frescos">Frescos</option>
+                  <option value="Básicos">Básicos</option>
+                  <option value="Lácteos">Lácteos</option>
+                </select>
+                <img src="/public/assets/profile-06a0c.svg" alt="" width="17" height="17" />
+              </span>
+            </label>
+            <button class="add-ingredient" type="submit">
+              <img src="/public/assets/profile-6f1ec.svg" alt="" width="20" height="20" />
+              Añadir a Alacena
+            </button>
+          </div>
+          <p class="form-help">
+            Si el ingrediente ya está en tu alacena, sumaremos la nueva cantidad. No se descuenta
+            hasta que confirmes que cocinaste una receta.
+          </p>
+        </form>
+
+        <div class="inventory-layout">
+          <section class="inventory" aria-label="Inventario">
+            <div class="inventory-toolbar">
+              <div
+                id="inventory-filters"
+                class="inventory-filters"
+                role="group"
+                aria-label="Filtrar ingredientes"
+              >
+                <button class="active" data-category="Todos" type="button">Todos · <b>8</b></button>
+                <button data-category="Frescos" type="button">Frescos · <b>3</b></button>
+                <button data-category="Básicos" type="button">Básicos · <b>3</b></button>
+                <button data-category="Lácteos" type="button">Lácteos · <b>2</b></button>
+              </div>
+              <label
+                >Ordenar:
+                <select id="inventory-sort" aria-label="Ordenar inventario">
+                  <option value="design">Categoría ↓</option>
+                  <option value="name">Nombre A–Z</option>
+                </select>
+              </label>
+            </div>
+            <div class="ingredient-grid" id="ingredient-grid"></div>
+            <p class="inventory-help">
+              Usa el lápiz para cambiar una cantidad o la papelera para quitar un ingrediente.
+            </p>
+          </section>
+
+          <aside class="pantry-aside">
+            <article class="ready-recipe">
+              <small>YA PUEDES COCINAR</small>
+              <img
+                src="/public/assets/profile-c779d.png"
+                alt="Tortilla de parmesano servida en un plato"
+              />
+              <h3>Tortilla de parmesano</h3>
+              <p>Tienes los 4 ingredientes · 15 min</p>
+              <a href="/index.html#recetas">
+                <img src="/public/assets/profile-ffa2e.svg" alt="" width="20" height="20" />
+                Ver receta
+              </a>
+            </article>
+            <article class="pantry-tip">
+              <h3>Un poquito de orden, mucho sabor.</h3>
+              <p>
+                Actualiza tus cantidades después de cocinar. Así sabrás qué tienes y qué te falta en
+                tu próxima receta.
+              </p>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <section class="my-recipes-content" id="mis-recetas" aria-labelledby="my-recipes-title">
+        <header class="pantry-heading">
+          <div>
+            <p class="recipes-eyebrow">TU RECETARIO PERSONAL</p>
+            <h2 id="my-recipes-title">Mis recetas</h2>
+            <p>Guarda tus propias ideas, consulta los ingredientes y vuelve a preparar tus favoritas.</p>
+          </div>
+          <button class="add-ingredient" id="create-recipe-button" type="button">＋ Crear receta</button>
+        </header>
+        <div class="my-recipes-toolbar">
+          <label class="recipe-search-label" for="recipe-search-profile">Buscar receta</label>
+          <input id="recipe-search-profile" type="search" placeholder="Ej. Pasta, postre, ensalada…">
+          <span id="my-recipes-count" aria-live="polite"></span>
+        </div>
+        <div class="my-recipes-grid" id="my-recipes-grid"></div>
+        <div class="recipe-detail-panel" id="recipe-detail-panel" hidden></div>
+      </section>
+    </main>
+
+    <dialog id="recipe-dialog" class="profile-dialog recipe-dialog">
+      <form id="recipe-form">
+        <div class="dialog-heading">
+          <div>
+            <small>MI PEQUEÑA COCINA</small>
+            <h2 id="recipe-dialog-title">Crear receta</h2>
+          </div>
+          <button class="dialog-close" id="close-recipe-dialog" type="button" aria-label="Cerrar">×</button>
+        </div>
+        <label>Nombre de la receta
+          <input id="recipe-title-input" maxlength="90" placeholder="Ej. Pasta cremosa con tomate" required>
+        </label>
+        <div class="recipe-form-row">
+          <label>Tiempo (minutos)
+            <input id="recipe-time-input" type="number" min="1" max="1440" placeholder="25" required>
+          </label>
+          <label>Porciones
+            <input id="recipe-servings-input" type="number" min="1" max="50" placeholder="2" required>
+          </label>
+        </div>
+        <label>Descripción
+          <textarea id="recipe-description-input" rows="2" maxlength="240" placeholder="Cuéntanos un poquito sobre tu receta…" required></textarea>
+        </label>
+        <label>Ingredientes
+          <textarea id="recipe-ingredients-input" rows="5" placeholder="200 g de pasta&#10;2 tomates&#10;1 cucharada de aceite" required></textarea>
+          <small class="recipe-field-help">Escribe un ingrediente por línea e incluye la cantidad.</small>
+        </label>
+        <label>Preparación
+          <textarea id="recipe-steps-input" rows="5" placeholder="1. Prepara los ingredientes…&#10;2. Cocina y mezcla…" required></textarea>
+        </label>
+        <div class="dialog-actions">
+          <button class="secondary-button" id="cancel-recipe-dialog" type="button">Cancelar</button>
+          <button class="add-ingredient" type="submit">♡ Guardar receta</button>
+        </div>
+      </form>
+    </dialog>
+
+    <footer>
+      <p><strong>bocadito. ✿ Hecho para cocinar de verdad.</strong></p>
+      <p>Ayuda · Sugerir una receta · Español</p>
+    </footer>
+
+    <dialog id="profile-dialog" class="profile-dialog">
+      <form id="profile-form" method="dialog">
+        <div class="dialog-heading">
+          <div>
+            <small>MI PEQUEÑA COCINA</small>
+            <h2>Editar perfil</h2>
+          </div>
+          <button class="dialog-close" value="cancel" aria-label="Cerrar">×</button>
+        </div>
+        <label>Nombre <input id="profile-name-input" value="Aly :3" required /></label>
+        <label
+          >Descripción
+          <textarea id="profile-bio-input" rows="3">
+Cocinera de todos los días · Me gusta lo sencillo y de temporada</textarea>
+        </label>
+        <div class="dialog-actions">
+          <button class="secondary-button" value="cancel">Cancelar</button>
+          <button class="add-ingredient" value="default">Guardar cambios</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div id="profile-toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/profile.js"></script>
+  </body>
+</html>

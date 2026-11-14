@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Fredoka:wght@600&family=Fraunces:wght@400&family=Inter:wght@400;500;600;700&family=Noto+Sans+Math&family=Noto+Sans+Symbols&family=Noto+Sans+Symbols+2&family=Noto+Sans:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
+    <title>Pasta con tomate y albahaca · bocadito.</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/recipe.css" />
+  </head>
+  <body class="recipe-page">
+    <header class="site-header recipe-header">
+      <a class="brand" href="/index.html" aria-label="bocadito, inicio">
+        <img src="/public/assets/recipe-77f15.svg" alt="" width="32" height="32" />
+        <span>bocadito.</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="active" href="/index.html">Recetario</a>
+        <a href="/index.html#recetas">Mis favoritas</a>
+        <a href="/perfil.html">Mi perfil</a>
+      </nav>
+      <div class="account">
+        <a class="pantry-button" href="/perfil.html#alacena">
+          <img src="/public/assets/recipe-e15f1.svg" alt="" width="20" height="20" />
+          <span>Alacena · 8</span>
+        </a>
+        <a class="avatar" href="/perfil.html" aria-label="Abrir perfil de LC">LC</a>
+      </div>
+    </header>
+
+    <main class="recipe-detail">
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <a href="/index.html">
+          <img src="/public/assets/recipe-3f043.svg" alt="" width="16" height="16" />
+          Recetario
+        </a>
+        <span>/</span>
+        <strong>Pasta con tomate y albahaca</strong>
+      </nav>
+
+      <section class="recipe-hero" aria-labelledby="recipe-title">
+        <div class="recipe-intro">
+          <p class="recipe-eyebrow">EL CLÁSICO DE CASA · VEGETARIANA</p>
+          <h1 id="recipe-title">Pasta con tomate y albahaca</h1>
+          <p class="recipe-description">
+            Tomate jugoso, albahaca fresca y un poco de parmesano. Una receta de las que se quedan
+            en tu cocina para siempre.
+          </p>
+          <div class="recipe-meta">
+            <span
+              ><img src="/public/assets/recipe-fdbc4.svg" alt="" width="17" height="17" />25 minutos</span
+            >
+            <span>Fácil</span>
+            <span>★ 4,9 (86)</span>
+          </div>
+          <div class="availability-summary">
+            <strong>Tu alacena ya tiene 6 de los 8 ingredientes.</strong>
+            <span>Solo te faltan albahaca (10 g) y pimienta (1 g).</span>
+          </div>
+          <div class="recipe-actions">
+            <button class="save-recipe" id="save-recipe" type="button">
+              <img src="/public/assets/recipe-d7835.svg" alt="" width="20" height="20" />
+              <span>Guardar receta</span>
+            </button>
+            <button class="share-recipe" id="share-recipe" type="button">
+              <img src="/public/assets/recipe-2c421.svg" alt="" width="20" height="20" />
+              Compartir
+            </button>
+          </div>
+        </div>
+        <figure class="recipe-photo">
+          <img
+            src="/public/assets/recipe-277a5.png"
+            alt="Pasta con tomate, albahaca y parmesano servida en un plato"
+          />
+          <figcaption>Sencilla. Casera. Deliciosa.</figcaption>
+        </figure>
+      </section>
+
+      <hr />
+
+      <section class="ingredients-section" aria-labelledby="ingredients-title">
+        <div class="ingredients-main">
+          <header class="section-heading">
+            <div>
+              <h2 id="ingredients-title">✿ Antes de ponerte el delantal</h2>
+              <p>Ingredientes comparados con tu Alacena · cantidades sin descontar</p>
+            </div>
+            <div class="portion-control" aria-label="Número de porciones">
+              <button id="less-portions" type="button" aria-label="Reducir porciones">
+                <img src="/public/assets/recipe-d9f11.svg" alt="" width="16" height="16" />
+              </button>
+              <strong><span id="portion-count">2</span> porciones</strong>
+              <button id="more-portions" type="button" aria-label="Aumentar porciones">
+                <img src="/public/assets/recipe-56bd5.svg" alt="" width="16" height="16" />
+              </button>
+            </div>
+          </header>
+
+          <div class="recipe-ingredient-grid">
+            <article class="recipe-ingredient" data-base="200" data-unit="g">
+              <p class="stock-status"><img src="/public/assets/recipe-7bfb6.svg" alt="" />Tienes</p>
+              <img class="recipe-ingredient-photo" src="/public/assets/recipe-f637f.png" alt="Pasta" />
+              <h3>Pasta</h3>
+              <strong><span class="scaled-amount">200</span> g para la receta</strong>
+              <small>En tu alacena: 500 g</small><span>Cantidad suficiente</span>
+            </article>
+            <article class="recipe-ingredient" data-base="400" data-unit="g">
+              <p class="stock-status"><img src="/public/assets/recipe-7bfb6.svg" alt="" />Tienes</p>
+              <img class="recipe-ingredient-photo" src="/public/assets/recipe-0d3c1.png" alt="Tomate" />
+              <h3>Tomate</h3>
+              <strong><span class="scaled-amount">400</span> g para la receta</strong>
+              <small>En tu alacena: 600 g</small><span>Cantidad suficiente</span>
+            </article>
+            <article class="recipe-ingredient" data-base="2" data-unit="dientes">
+              <p class="stock-status"><img src="/public/assets/recipe-7bfb6.svg" alt="" />Tienes</p>
+              <img class="recipe-ingredient-photo" src="/public/assets/recipe-85e87.png" alt="Ajo" />
+              <h3>Ajo</h3>
+              <strong><span class="scaled-amount">2</span> dientes para la receta</strong>
+              <small>En tu alacena: 1 cabeza</small><span>Cantidad suficiente</span>
+            </article>
+            <article class="recipe-ingredient" data-base="30" data-unit="ml">
+              <p class="stock-status"><img src="/public/assets/recipe-7bfb6.svg" alt="" />Tienes</p>
+              <img
+                class="recipe-ingredient-photo"
+                src="/public/assets/recipe-5f83b.png"
+                alt="Aceite de oliva"
+              />
+              <h3>Aceite de oliva</h3>
+              <strong><span class="scaled-amount">30</span> ml para la receta</strong>
+              <small>En tu alacena: 250 ml</small><span>Cantidad suficiente</span>
+            </article>
+            <article class="recipe-ingredient" data-base="5" data-unit="g">
+              <p class="stock-status"><img src="/public/assets/recipe-7bfb6.svg" alt="" />Tienes</p>
+              <img class="recipe-ingredient-photo" src="/public/assets/recipe-8a1eb.png" alt="Sal" />
+              <h3>Sal</h3>
+              <strong><span class="scaled-amount">5</span> g para la receta</strong>
+              <small>En tu alacena: 200 g</small><span>Cantidad suficiente</span>
+            </article>
+            <article class="recipe-ingredient" data-base="40" data-unit="g">
+              <p class="stock-status"><img src="/public/assets/recipe-7bfb6.svg" alt="" />Tienes</p>
+              <img class="recipe-ingredient-photo" src="/public/assets/recipe-787be.png" alt="Parmesano" />
+              <h3>Parmesano</h3>
+              <strong><span class="scaled-amount">40</span> g para la receta</strong>
+              <small>En tu alacena: 80 g</small><span>Cantidad suficiente</span>
+            </article>
+            <article class="recipe-ingredient missing" data-base="10" data-unit="g">
+              <p class="stock-status"><img src="/public/assets/recipe-7910d.svg" alt="" />Te falta</p>
+              <img class="recipe-ingredient-photo" src="/public/assets/recipe-e7223.png" alt="Albahaca" />
+              <h3>Albahaca</h3>
+              <strong><span class="scaled-amount">10</span> g para la receta</strong>
+              <small>En tu alacena: 0 g</small
+              ><span>Comprar <b class="scaled-amount">10</b> g</span>
+            </article>
+            <article class="recipe-ingredient missing" data-base="1" data-unit="g">
+              <p class="stock-status"><img src="/public/assets/recipe-7910d.svg" alt="" />Te falta</p>
+              <img class="recipe-ingredient-photo" src="/public/assets/recipe-095e8.png" alt="Pimienta" />
+              <h3>Pimienta</h3>
+              <strong><span class="scaled-amount">1</span> g para la receta</strong>
+              <small>En tu alacena: 0 g</small><span>Comprar <b class="scaled-amount">1</b> g</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="shopping-list">
+          <h2>
+            <img src="/public/assets/recipe-fd7ee.svg" alt="" width="20" height="20" />Te falta un poquito
+          </h2>
+          <p>Dos ingredientes y ya estás a un plato de tu próxima comida favorita.</p>
+          <div class="shopping-item">
+            <img src="/public/assets/recipe-24084.png" alt="Albahaca" />
+            <div>
+              <strong>Albahaca</strong><span>Te falta · <b data-shopping-base="10">10</b> g</span>
+            </div>
+          </div>
+          <div class="shopping-item">
+            <img src="/public/assets/recipe-5afa1.png" alt="Pimienta" />
+            <div>
+              <strong>Pimienta</strong><span>Te falta · <b data-shopping-base="1">1</b> g</span>
+            </div>
+          </div>
+          <button class="add-shopping" id="add-shopping" type="button">
+            <img src="/public/assets/recipe-6f1ec.svg" alt="" width="20" height="20" />
+            <span>Añadir 2 a mi lista</span>
+          </button>
+          <a href="/perfil.html#alacena">¿Ya los tienes? Actualiza tu Alacena</a>
+          <hr />
+          <p class="shopping-tip">La albahaca va al final: así conserva todo su aroma.</p>
+        </aside>
+      </section>
+
+      <hr />
+
+      <section class="preparation-section" aria-labelledby="preparation-title">
+        <div class="steps">
+          <header class="section-heading">
+            <h2 id="preparation-title">✿ Ahora sí, a cocinar.</h2>
+            <button class="cooking-mode-button" id="cooking-mode" type="button">
+              <img src="/public/assets/recipe-c362d.svg" alt="" width="20" height="20" />
+              <span>Modo cocina</span>
+            </button>
+          </header>
+          <ol class="cooking-steps">
+            <li>
+              <span>01</span>
+              <div>
+                <header>
+                  <h3>Pon el agua a bailar</h3>
+                  <small>10 min</small>
+                </header>
+                <p>
+                  Hierve una olla con agua y los 5 g de sal. Cuece los 200 g de pasta hasta que esté
+                  al dente. Reserva media taza del agua de cocción antes de escurrir.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <header>
+                  <h3>Prepara una salsa con cariño</h3>
+                  <small>10 min</small>
+                </header>
+                <p>
+                  Pica los 2 dientes de ajo y los 400 g de tomate. Calienta los 30 ml de aceite,
+                  dora el ajo un minuto y añade el tomate. Cocina a fuego medio durante 8–10
+                  minutos.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <header>
+                  <h3>Mézclalo todo</h3>
+                  <small>3 min</small>
+                </header>
+                <p>
+                  Añade la pasta a la salsa con un chorrito del agua reservada. Remueve hasta que
+                  quede jugosa. Incorpora los 10 g de albahaca y el gramo de pimienta recién molida.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <header>
+                  <h3>A la mesa, sin esperar</h3>
+                  <small>2 min</small>
+                </header>
+                <p>
+                  Reparte en dos platos y termina con los 40 g de parmesano rallado. Sirve
+                  enseguida: la pasta sabe mejor en buena compañía.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <aside class="cooked-card">
+          <img src="/public/assets/recipe-36171.svg" alt="" width="28" height="28" />
+          <h2>¿Ya la cocinaste?</h2>
+          <p>
+            Confirma al terminar para descontar las cantidades utilizadas y mantener tu Alacena al
+            día.
+          </p>
+          <button id="mark-cooked" type="button">
+            <img src="/public/assets/recipe-20480.svg" alt="" width="20" height="20" />
+            <span>Marcar como cocinada</span>
+          </button>
+          <small>Antes de confirmar, añade los ingredientes que te faltan a tu Alacena.</small>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <p><strong>bocadito. ✿ Hecho para cocinar de verdad.</strong></p>
+      <p>Ayuda · Sugerir una receta · Español</p>
+    </footer>
+    <div id="recipe-toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/recipe.js"></script>
+  </body>
+</html>

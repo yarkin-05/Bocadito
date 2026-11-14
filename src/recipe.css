@@ -1,0 +1,602 @@
+.recipe-page {
+  --recipe-paper: #fff9f1;
+  --recipe-line: #e7d8cf;
+  --recipe-blush: #f7e7e4;
+  --recipe-pink: #d76a7a;
+  --recipe-ink: #4a2a2a;
+  background: var(--recipe-paper);
+  color: var(--recipe-ink);
+}
+.recipe-page .site-header {
+  border-color: var(--recipe-line);
+  border-radius: 0 0 24px 24px;
+  background: var(--recipe-paper);
+  box-shadow: 0 6px 18px rgba(74, 42, 26, 0.05);
+}
+.recipe-page .brand span {
+  color: var(--recipe-ink);
+}
+.recipe-page .main-nav a {
+  color: var(--recipe-ink);
+}
+.recipe-page .main-nav .active {
+  color: var(--recipe-pink);
+}
+.recipe-page .pantry-button {
+  border-color: var(--recipe-line);
+  background: var(--recipe-blush);
+  color: var(--recipe-ink);
+  font-family: "Inter"; font-weight: 400;
+}
+.recipe-page .avatar {
+  border: 1px solid var(--recipe-pink);
+  background: var(--recipe-ink);
+  box-shadow: 0 4px 12px rgba(215, 106, 122, 0.1);
+}
+
+.recipe-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 24px 56px 40px;
+}
+.breadcrumb {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--recipe-line);
+  font-size: 12px;
+}
+.breadcrumb a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #8d7168;
+  font-family: "Inter"; font-weight: 600;
+  text-decoration: none;
+}
+.breadcrumb > span {
+  color: var(--recipe-line);
+}
+.breadcrumb strong {
+  font-family: "Inter"; font-weight: 700;
+}
+
+.recipe-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(460px, 645px);
+  gap: 36px;
+  align-items: start;
+}
+.recipe-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 12px 0;
+}
+.recipe-eyebrow {
+  margin: 0;
+  color: var(--recipe-pink);
+  font-family: "Inter"; font-weight: 600;
+  font-size: 11px;
+}
+.recipe-intro h1 {
+  margin: 0;
+  font-family: "Baloo 2", sans-serif; font-weight: 800;
+  font-size: 52px;
+  line-height: 1.1;
+}
+.recipe-description {
+  margin: 0;
+  color: #8d7168;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.recipe-meta {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 13px;
+}
+.recipe-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.availability-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 18px;
+  border: 1px solid var(--recipe-line);
+  border-radius: 10px;
+  background: var(--recipe-blush);
+}
+.availability-summary strong {
+  font-family: "Inter"; font-weight: 600;
+  font-size: 14px;
+}
+.availability-summary span {
+  color: #a3475a;
+  font-size: 12px;
+}
+.recipe-actions {
+  display: flex;
+  gap: 12px;
+}
+.recipe-actions button,
+.cooking-mode-button,
+.cooked-card button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 20px;
+  border: 1px solid var(--recipe-line);
+  border-radius: 10px;
+  background: var(--recipe-paper);
+  color: var(--recipe-ink);
+  font-family: "Inter"; font-weight: 600;
+  font-size: 14px;
+}
+.recipe-actions .save-recipe {
+  border-color: var(--recipe-pink);
+  background: var(--recipe-pink);
+  color: #fff9ec;
+}
+.save-recipe.saved {
+  background: #a3475a;
+}
+.recipe-photo {
+  height: 423px;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--recipe-line);
+  border-radius: 20px;
+}
+.recipe-photo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.recipe-photo figcaption {
+  position: absolute;
+  left: 19px;
+  bottom: 19px;
+  padding: 9px 15px;
+  border: 1px solid var(--recipe-line);
+  border-radius: 100px;
+  background: var(--recipe-paper);
+  font-family: "Pacifico"; font-weight: 400;
+  font-size: 15px;
+}
+.recipe-detail > hr,
+.shopping-list hr {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  border: 0;
+  background: var(--recipe-line);
+  opacity: 0.8;
+}
+
+.ingredients-section,
+.preparation-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 28px;
+  align-items: start;
+}
+.ingredients-main,
+.steps {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.section-heading h2 {
+  margin: 0;
+  font-family: "Baloo 2"; font-weight: 800;
+  font-size: 32px;
+  line-height: 1.15;
+}
+.section-heading p {
+  margin: 5px 0 0;
+  color: #8d7168;
+  font-size: 12px;
+}
+.portion-control {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  border: 1px solid var(--recipe-line);
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.portion-control button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.portion-control strong {
+  font-family: "Inter"; font-weight: 600;
+  font-size: 12px;
+}
+.recipe-ingredient-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.recipe-ingredient {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  overflow: hidden;
+  border: 1px solid var(--recipe-line);
+  border-radius: 16px;
+  background: var(--recipe-paper);
+}
+.recipe-ingredient.missing {
+  border-color: var(--recipe-pink);
+  background: var(--recipe-blush);
+}
+.stock-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-family: "Inter"; font-weight: 600;
+  font-size: 12px;
+}
+.stock-status img {
+  width: 16px;
+  height: 16px;
+}
+.missing .stock-status,
+.missing > span:last-child {
+  color: var(--recipe-pink);
+}
+.recipe-ingredient-photo {
+  width: 100%;
+  height: 96px;
+  object-fit: cover;
+}
+.recipe-ingredient h3 {
+  margin: 0;
+  font-family: "Baloo 2"; font-weight: 800;
+  font-size: 18px;
+  line-height: 1.15;
+}
+.recipe-ingredient > strong {
+  font-family: "Inter"; font-weight: 600;
+  font-size: 13px;
+  line-height: 1.3;
+}
+.recipe-ingredient small,
+.recipe-ingredient > span {
+  color: #8d7168;
+  font-size: 11px;
+  line-height: 1.25;
+}
+
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid var(--recipe-line);
+  border-radius: 16px;
+  background: var(--recipe-blush);
+}
+.shopping-list h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-family: "Baloo 2"; font-weight: 800;
+  font-size: 24px;
+}
+.shopping-list > p:not(.shopping-tip) {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.shopping-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--recipe-line);
+  border-radius: 12px;
+  background: var(--recipe-paper);
+}
+.shopping-item > img {
+  width: 64px;
+  height: 60px;
+  object-fit: cover;
+}
+.shopping-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.shopping-item strong {
+  font-family: "Inter"; font-weight: 600;
+  font-size: 14px;
+}
+.shopping-item span {
+  color: var(--recipe-pink);
+  font-size: 12px;
+}
+.add-shopping {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 20px;
+  border: 1px solid var(--recipe-pink);
+  border-radius: 10px;
+  background: var(--recipe-pink);
+  color: #fff9ec;
+  font-family: "Inter"; font-weight: 600;
+  font-size: 14px;
+}
+.add-shopping.added {
+  background: #586547;
+  border-color: #586547;
+}
+.shopping-list > a {
+  color: var(--recipe-pink);
+  font-family: "Inter"; font-weight: 600;
+  font-size: 12px;
+}
+.shopping-tip {
+  margin: 0;
+  color: var(--recipe-pink);
+  font-family: "Pacifico"; font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.preparation-section .section-heading h2 {
+  font-size: 34px;
+}
+.cooking-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cooking-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+.cooking-steps li > span {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--recipe-pink);
+  border-radius: 50%;
+  background: var(--recipe-blush);
+  color: var(--recipe-pink);
+  font-family: "Baloo 2"; font-weight: 800;
+  font-size: 21px;
+}
+.cooking-steps li > div {
+  flex: 1;
+}
+.cooking-steps header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.cooking-steps h3 {
+  margin: 0;
+  font-family: "Baloo 2"; font-weight: 800;
+  font-size: 20px;
+}
+.cooking-steps small {
+  color: #8d7168;
+  font-size: 11px;
+}
+.cooking-steps p {
+  margin: 8px 0 0;
+  color: #8d7168;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.cooked-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 17px;
+  padding: 24px;
+  border: 1px solid var(--recipe-line);
+  border-radius: 16px;
+}
+.cooked-card h2 {
+  margin: 0;
+  font-family: "Baloo 2"; font-weight: 800;
+  font-size: 24px;
+}
+.cooked-card p {
+  margin: 0;
+  color: #8d7168;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.cooked-card small {
+  color: #8d7168;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.cooked-card button.cooked {
+  border-color: #586547;
+  background: #586547;
+  color: white;
+}
+.recipe-page footer {
+  border-color: var(--recipe-line);
+  border-radius: 0 0 24px 24px;
+  background: var(--recipe-paper);
+  box-shadow: 0 8px 24px rgba(74, 42, 26, 0.05);
+}
+.recipe-page footer strong {
+  color: var(--recipe-ink);
+}
+
+.cooking-mode .recipe-header,
+.cooking-mode .breadcrumb,
+.cooking-mode .recipe-hero,
+.cooking-mode .ingredients-section,
+.cooking-mode .recipe-detail > hr,
+.cooking-mode footer,
+.cooking-mode .cooked-card {
+  display: none;
+}
+.cooking-mode .recipe-detail {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 48px;
+}
+.cooking-mode .preparation-section {
+  display: block;
+}
+.cooking-mode .steps {
+  gap: 40px;
+}
+.cooking-mode .cooking-steps {
+  gap: 42px;
+}
+.cooking-mode .cooking-steps h3 {
+  font-size: 30px;
+}
+.cooking-mode .cooking-steps p {
+  font-size: 17px;
+}
+
+@media (min-width: 1441px) {
+  .recipe-detail {
+    padding-left: max(56px, calc((100vw - 1440px) / 2 + 56px));
+    padding-right: max(56px, calc((100vw - 1440px) / 2 + 56px));
+  }
+}
+@media (max-width: 1150px) {
+  .recipe-hero {
+    grid-template-columns: 1fr 1fr;
+  }
+  .recipe-intro h1 {
+    font-size: 44px;
+  }
+  .recipe-ingredient-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 850px) {
+  .recipe-detail {
+    padding: 22px 24px 36px;
+  }
+  .recipe-hero {
+    grid-template-columns: 1fr;
+  }
+  .recipe-photo {
+    grid-row: 1;
+    height: 360px;
+  }
+  .ingredients-section,
+  .preparation-section {
+    grid-template-columns: 1fr;
+  }
+  .shopping-list,
+  .cooked-card {
+    max-width: none;
+  }
+}
+@media (max-width: 600px) {
+  .recipe-detail {
+    gap: 24px;
+    padding: 18px 18px 32px;
+  }
+  .breadcrumb strong {
+    max-width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .recipe-photo {
+    height: 260px;
+  }
+  .recipe-intro h1 {
+    font-size: 40px;
+  }
+  .recipe-meta {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .recipe-actions {
+    flex-wrap: wrap;
+  }
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .section-heading h2,
+  .preparation-section .section-heading h2 {
+    font-size: 28px;
+  }
+  .recipe-ingredient-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .recipe-ingredient {
+    padding: 12px;
+  }
+  .recipe-ingredient h3 {
+    font-size: 17px;
+  }
+  .recipe-ingredient > strong {
+    font-size: 11px;
+  }
+  .shopping-list,
+  .cooked-card {
+    padding: 20px;
+  }
+  .cooking-steps li {
+    gap: 12px;
+  }
+  .cooking-steps li > span {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+    font-size: 18px;
+  }
+  .cooking-steps header {
+    gap: 12px;
+  }
+  .cooking-mode .recipe-detail {
+    padding: 24px 18px;
+  }
+  .cooking-mode .cooking-steps h3 {
+    font-size: 23px;
+  }
+  .cooking-mode .cooking-steps p {
+    font-size: 15px;
+  }
+}

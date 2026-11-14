@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Fredoka:wght@600&family=Fraunces:wght@400&family=Inter:wght@400;500;600;700&family=Noto+Sans+Math&family=Noto+Sans+Symbols&family=Noto+Sans+Symbols+2&family=Noto+Sans:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
+    <title>Bocadito · Recetario</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/index.html" aria-label="bocadito, inicio">
+        <img src="/public/assets/fae16.svg" alt="" width="32" height="32" />
+        <span>bocadito.</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="active" href="#recetario">Recetario</a>
+        <a href="#recetas">Mis recetas</a>
+        <a href="/perfil.html">Mi perfil</a>
+      </nav>
+      <div class="account">
+        <a class="pantry-button" href="/perfil.html#alacena">
+          <img src="/public/assets/280c1.svg" alt="" width="20" height="20" />
+          <span>Alacena · 8</span>
+        </a>
+        <a class="avatar" href="/perfil.html" aria-label="Abrir perfil de LC">LC</a>
+      </div>
+    </header>
+
+    <main id="recetario">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-blob blob-one" src="/public/assets/127db.svg" alt="" />
+        <img class="hero-blob blob-two" src="/public/assets/94a92.svg" alt="" />
+        <img class="hero-blob blob-three" src="/public/assets/5e346.svg" alt="" />
+        <img class="hero-blob blob-four" src="/public/assets/30bb7.svg" alt="" />
+        <img class="hero-blob blob-five" src="/public/assets/41281.svg" alt="" />
+
+        <div class="hero-copy">
+          <p class="eyebrow">BUENOS INGREDIENTES. BUENOS RATOS.</p>
+          <h1 id="hero-title">¿Qué se cocina<br />hoy, Aly?</h1>
+          <p>Un recetario para tus antojos y para lo que ya tienes en casa.</p>
+        </div>
+        <p class="hero-note script">de tu alacena a tu mesa ♡</p>
+
+        <div class="hero-collage" aria-hidden="true">
+          <div class="hero-photo bread">
+            <img class="photo" src="/public/assets/eb7b5.png" alt="" />
+            <img class="ring" src="/public/assets/a3742.png" alt="" />
+          </div>
+          <div class="hero-photo tomato">
+            <img class="photo" src="/public/assets/bc273.png" alt="" />
+            <img class="ring" src="/public/assets/ad735.png" alt="" />
+          </div>
+          <div class="hero-photo pancakes">
+            <img class="photo" src="/public/assets/50e91.png" alt="" />
+            <img class="ring" src="/public/assets/7b406.svg" alt="" />
+          </div>
+          <span class="deco d1">♡</span><span class="deco d2">✦</span> <span class="deco d3">♡</span
+          ><span class="deco d4">✦</span>
+          <img class="dot dot-one" src="/public/assets/7220a.svg" alt="" />
+          <img class="dot dot-two" src="/public/assets/34c00.svg" alt="" />
+          <img class="dot dot-three" src="/public/assets/59064.svg" alt="" />
+          <img class="dot dot-four" src="/public/assets/1f141.svg" alt="" />
+        </div>
+      </section>
+
+      <section class="discover" aria-label="Buscar y filtrar recetas">
+        <div class="search-row">
+          <label class="search-box">
+            <img src="/public/assets/63200.svg" alt="" width="20" height="20" />
+            <input
+              id="recipe-search"
+              type="search"
+              placeholder="Busca una receta o un ingrediente…"
+            />
+          </label>
+          <button class="more-filters" type="button">
+            <img src="/public/assets/2cb57.svg" alt="" width="20" height="20" />
+            Más filtros
+          </button>
+        </div>
+        <div class="filter-row" role="group" aria-label="Categorías">
+          <button class="filter active" data-filter="all" type="button">Todas</button>
+          <button class="filter" data-filter="rapida" type="button">Rápidas</button>
+          <button class="filter" data-filter="vegetariana" type="button">Vegetarianas</button>
+          <button class="filter" data-filter="desayuno" type="button">Desayunos</button>
+          <button class="filter" data-filter="dulce" type="button">Dulces</button>
+          <button class="filter" data-filter="sin-horno" type="button">Sin horno</button>
+          <label class="pantry-check">
+            <input id="pantry-only" type="checkbox" />
+            <span class="check-art" aria-hidden="true">
+              <img src="/public/assets/84d8a.svg" alt="" width="17" height="17" />
+              <i>✓</i>
+            </span>
+            <span>Solo recetas con lo que tengo</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="catalog" id="recetas" aria-labelledby="catalog-title">
+        <div class="results-heading">
+          <h2 id="catalog-title">
+            <span id="result-count">6</span> recetas para ti <b>✦</b><i>♡</i>
+          </h2>
+          <label
+            >Ordenar:
+            <select aria-label="Ordenar recetas">
+              <option>Recomendadas</option>
+              <option>Más rápidas</option>
+              <option>Menos ingredientes</option>
+            </select>
+          </label>
+        </div>
+
+        <article
+          class="featured recipe-item"
+          data-name="Pasta con tomate y albahaca"
+          data-tags="rapida vegetariana"
+          data-pantry="false"
+        >
+          <div class="featured-image">
+            <img src="/public/assets/22c57.png" alt="Un plato de pasta con tomate y albahaca" />
+            <span class="badge pink">EL CLÁSICO DE CASA</span>
+            <button
+              class="favorite light"
+              type="button"
+              aria-label="Guardar Pasta con tomate y albahaca"
+            >
+              ♡
+            </button>
+            <span class="almost">✦ Casi lista</span>
+          </div>
+          <div class="featured-info">
+            <img class="info-blob blob-a" src="/public/assets/d0b26.svg" alt="" />
+            <img class="info-blob blob-b" src="/public/assets/35bce.svg" alt="" />
+            <img class="info-blob blob-c" src="/public/assets/12327.svg" alt="" />
+            <p class="script kicker">receta de la semana ♡</p>
+            <h3>Pasta con tomate<br />y albahaca</h3>
+            <p class="meta">
+              <img src="/public/assets/89b63.svg" alt="" />25 min&nbsp; · &nbsp;Fácil&nbsp; · &nbsp;2
+              porciones
+            </p>
+            <div class="match">
+              <strong><img src="/public/assets/144ce.svg" alt="" />6 de 8 ingredientes</strong>
+              <span>Te faltan albahaca y pimienta</span>
+            </div>
+            <a class="primary-button" href="/receta.html">Ver receta →</a>
+          </div>
+        </article>
+
+        <div id="empty-state" class="empty-state" hidden>
+          <h3>No encontramos esa receta</h3>
+          <p>Prueba con otro nombre o cambia los filtros.</p>
+        </div>
+
+        <aside class="quote-strip">
+          <span>✦</span><span>♡</span>
+          <strong class="script">Menos compras, más cosas ricas.</strong>
+          <span>✦</span><span>♡</span><span>✦</span> <strong class="script">¡a cocinar!</strong
+          ><span>♡</span><span>✦</span>
+        </aside>
+
+        <div class="inspiration-row">
+          <aside class="pantry-card">
+            <h3><img src="/public/assets/efae4.svg" alt="" />Tu alacena inspira. <em>♡</em></h3>
+            <p>Tienes 8 ingredientes. Te mostramos cuánto te falta para cada receta.</p>
+            <div class="ingredient-preview">
+              <img src="/public/assets/51a7f.png" alt="Tomates" />
+              <img src="/public/assets/1e866.png" alt="Huevos" />
+              <span>+6</span>
+            </div>
+            <p>Tomate · 600 g &nbsp;·&nbsp; Huevos · 6 unidades &nbsp;·&nbsp; Pasta · 500 g</p>
+            <a class="pantry-card-link" href="/perfil.html#alacena">
+              <img src="/public/assets/5264d.svg" alt="" />
+              Ver mi alacena
+            </a>
+          </aside>
+
+          <article
+            class="wide-card recipe-item"
+            data-name="Tortilla de parmesano"
+            data-tags="rapida vegetariana"
+            data-pantry="true"
+          >
+            <div class="dish-art tortilla-art">
+              <img class="back back-one" src="/public/assets/b8663.svg" alt="" />
+              <img class="back back-two" src="/public/assets/4be02.svg" alt="" />
+              <img class="dish" src="/public/assets/71ee2.png" alt="Tortilla de parmesano" />
+              <img class="dish-ring" src="/public/assets/c6adb.svg" alt="" />
+              <span class="available">✓ Tienes todo</span>
+            </div>
+            <div class="card-copy">
+              <small>POQUITOS INGREDIENTES</small>
+              <h3>Tortilla de parmesano</h3>
+              <p>15 min&nbsp; · &nbsp;Fácil&nbsp; · &nbsp;2 porciones</p>
+              <strong><img src="/public/assets/67086.svg" alt="" />4 de 4 ingredientes</strong>
+            </div>
+          </article>
+        </div>
+
+        <div class="recipe-grid">
+          <article
+            class="recipe-card recipe-item"
+            data-name="Crema de tomate asado"
+            data-tags="vegetariana"
+            data-pantry="false"
+          >
+            <div class="dish-art cream-art">
+              <img class="back back-one" src="/public/assets/2045f.svg" alt="" />
+              <img class="back back-two" src="/public/assets/0d50a.svg" alt="" />
+              <img class="dish" src="/public/assets/181ab.png" alt="Crema de tomate asado" />
+              <img class="dish-ring" src="/public/assets/f3d79.png" alt="" />
+              <span class="availability">Casi lista</span>
+              <button class="favorite" type="button" aria-label="Guardar Crema de tomate asado">
+                ♡
+              </button>
+            </div>
+            <div class="card-copy">
+              <small>UNA CUCHARADA DE CALMA</small>
+              <h3>Crema de tomate asado</h3>
+              <p>40 min&nbsp; · &nbsp;Fácil&nbsp; · &nbsp;2 porciones</p>
+              <strong><img src="/public/assets/ea296.svg" alt="" />5 de 6 ingredientes</strong>
+              <p>Solo te falta albahaca</p>
+            </div>
+          </article>
+
+          <article
+            class="recipe-card recipe-item"
+            data-name="Pancakes de domingo"
+            data-tags="desayuno dulce"
+            data-pantry="false"
+          >
+            <div class="dish-art pancake-art">
+              <img class="back back-one" src="/public/assets/b62bf.svg" alt="" />
+              <img class="back back-two" src="/public/assets/6411e.svg" alt="" />
+              <img class="dish" src="/public/assets/ec779.png" alt="Pancakes de domingo" />
+              <img class="dish-ring" src="/public/assets/82a2d.svg" alt="" />
+              <span class="availability">Para el antojo</span>
+            </div>
+            <div class="card-copy">
+              <small>ALGO DULCE</small>
+              <h3>Pancakes de domingo</h3>
+              <p>20 min&nbsp; · &nbsp;Fácil&nbsp; · &nbsp;2 porciones</p>
+              <strong><img src="/public/assets/ea296.svg" alt="" />4 de 6 ingredientes</strong>
+              <p>Te faltan harina y azúcar</p>
+            </div>
+          </article>
+
+          <div class="compact-column">
+            <article
+              class="compact-card recipe-item"
+              data-name="Pasta cremosa con setas"
+              data-tags="rapida vegetariana"
+              data-pantry="false"
+            >
+              <div class="compact-art">
+                <img class="back" src="/public/assets/a434a.svg" alt="" />
+                <img class="dish" src="/public/assets/dc10f.png" alt="Pasta cremosa con setas" />
+                <img class="dish-ring" src="/public/assets/3394b.svg" alt="" />
+              </div>
+              <div class="card-copy">
+                <small>CONFORT EN UN PLATO</small>
+                <h3>Pasta cremosa con setas</h3>
+                <p>30 min · Fácil · 2 porciones</p>
+                <strong><img src="/public/assets/852c6.svg" alt="" />6 de 7 ingredientes</strong>
+                <p>Solo te faltan las setas</p>
+              </div>
+            </article>
+            <article
+              class="compact-card recipe-item"
+              data-name="Ensalada de burrata"
+              data-tags="rapida vegetariana sin-horno"
+              data-pantry="false"
+            >
+              <div class="compact-art">
+                <img class="back" src="/public/assets/37bf2.svg" alt="" />
+                <img class="dish" src="/public/assets/e9a4d.png" alt="Ensalada de burrata" />
+                <img class="dish-ring" src="/public/assets/3394b.svg" alt="" />
+                <span>Sin horno</span>
+              </div>
+              <div class="card-copy">
+                <small>FRESCA Y SIN PRISA</small>
+                <h3>Ensalada de burrata</h3>
+                <p>10 min · Fácil · 2 porciones</p>
+                <strong><img src="/public/assets/852c6.svg" alt="" />3 de 5 ingredientes</strong>
+                <p>Te faltan burrata y albahaca</p>
+              </div>
+            </article>
+            <p class="portion-note">
+              Las cantidades se comparan para 2 porciones. Puedes ajustarlas dentro de cada receta.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <strong>bocadito. &nbsp;✿ Hecho para cocinar de verdad.</strong>
+        <span class="script">♡</span>
+      </p>
+      <p>Ayuda &nbsp;·&nbsp; Sugerir una receta &nbsp;·&nbsp; Español</p>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
